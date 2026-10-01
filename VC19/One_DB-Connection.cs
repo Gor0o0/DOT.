@@ -15,24 +15,29 @@ namespace DB_Connect_First
                 "Initial Catalog=DB1;" +
                 "Integrated Security=True;" +
                 "TrustServerCertificate=True;";
-            SqlConnection connection = new SqlConnection(connectionString);
-            connection.Open();
-
-            string sql_command = "SELECT TOP 10 * FROM products";
-            SqlCommand command = new SqlCommand(sql_command, connection);
-
-            SqlDataReader reader = command.ExecuteReader();
-            while(reader.Read())
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                int id = reader.GetInt32(0);
-                string name = reader.GetString(1);
-                string products_number = reader.GetString(2);
-                decimal cost = reader.GetDecimal(3);
-                decimal list_price = reader.GetDecimal(4);
-                decimal diff_price = reader.GetDecimal(5);
-                DateTime delivery_date = reader.GetDateTime(6);
+                connection.Open();
 
-                Console.WriteLine($"Indetify: {id}, Name: {name}, PN: {products_number}, Cost: {cost}, LP: {list_price}, DP: {diff_price}, DD: {delivery_date}");
+                string sql_command = "SELECT TOP 10 * FROM products";
+                SqlCommand command = new SqlCommand(sql_command, connection);
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        int id = reader.GetInt32(0);
+                        string name = reader.GetString(1);
+                        string products_number = reader.GetString(2);
+                        decimal cost = reader.GetDecimal(3);
+                        decimal list_price = reader.GetDecimal(4);
+                        decimal diff_price = reader.GetDecimal(5);
+                        DateTime delivery_date = reader.GetDateTime(6);
+
+                        Console.WriteLine($"Indetify: {id}, Name: {name}, PN: {products_number}, Cost: {cost}, LP: {list_price}, DP: {diff_price}, DD: {delivery_date}");
+                    }
+                }
+
             }
 
             Console.WriteLine("Hi!");
