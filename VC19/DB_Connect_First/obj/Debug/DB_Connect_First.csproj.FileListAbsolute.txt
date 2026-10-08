@@ -1,0 +1,10 @@
+E:\VS19my\DB_Connect_First\DB_Connect_First\bin\Debug\DB_Connect_First.exe.config
+E:\VS19my\DB_Connect_First\DB_Connect_First\bin\Debug\DB_Connect_First.exe
+E:\VS19my\DB_Connect_First\DB_Connect_First\bin\Debug\DB_Connect_First.pdb
+E:\VS19my\DB_Connect_First\DB_Connect_First\obj\Debug\DB_Connect_First.csproj.AssemblyReference.cache
+E:\VS19my\DB_Connect_First\DB_Connect_First\obj\Debug\DB_Connect_First.csproj.CoreCompileInputs.cache
+E:\VS19my\DB_Connect_First\DB_Connect_First\obj\Debug\DB_Connect_First.exe
+E:\VS19my\DB_Connect_First\DB_Connect_First\obj\Debug\DB_Connect_First.pdb
+E:\VS19my\DB_Connect_First\DB_Connect_First\bin\Debug\System.Data.SqlClient.dll
+E:\VS19my\DB_Connect_First\DB_Connect_First\bin\Debug\System.Data.SqlClient.xml
+E:\VS19my\DB_Connect_First\DB_Connect_First\obj\Debug\DB_Connect_First.csproj.CopyComplete
