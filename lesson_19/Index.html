@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/routers.js" defer></script>
+</head>
+<body>
+    <header>
+        <button id="studentsButton" type="button">Students</button>
+        <button id="groupsButton" type="button">Groups</button>
+    </header>
+
+    <main>
+        <p id="message"></p>
+
+        <table id="studentsTable" hidden>
+            <thead>
+                <tr>
+                    <th>ID</th><th>First name</th>
+                    <th>Last name</th>
+                    <th>Age</th><th>Group ID</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="studentBody"></tbody>
+        </table>
+
+        <table id="groupsTable" hidden>
+            <thead>
+                <tr><th>ID</th><th>Group</th></tr>
+            </thead>
+            <tbody id="groupBody"></tbody>
+        </table>
+
+        <section id="studentSection">
+            <h2>Add student</h2>
+            <form id="studentForm">
+                <label>First name
+                    <input id="firstNameStudent" type="text" placeholder="John" required>
+                </label>
+                <label>Last name
+                    <input id="lastNameStudent" type="text" placeholder="Smith" required>
+                </label>
+                <label>Age
+                    <input id="ageStudent" type="number" min="1" max="120" placeholder="18" required>
+                </label>
+                <label>Group
+                    <select id="groupId" required>
+                        <option value="">Select group</option>
+                    </select>
+                </label>
+                <button id="saveStudentButton" type="submit">Add</button>
+                <button id="cancelEditButton" type="button" hidden>Cancel</button>
+            </form>
+        </section>
+
+        <section id="groupSection" hidden>
+            <h2>Add group</h2>
+            <form id="groupForm">
+                <label>Group name
+                    <input id="groupName" type="text" placeholder="IS-21" maxlength="100" required>
+                </label>
+                <button type="submit">Add group</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

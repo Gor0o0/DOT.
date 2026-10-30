@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <button onclick="loadStudents()">Students</button>
+        <button onclick="loadGroups()">Groups</button>
+    </header>
+
+    <main>
+        <table id="studentsTable" style="display: none;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody id="studentBody"></tbody>
+        </table>
+
+        <table id="groupsTable" style="display: none;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Group</th>
+                </tr>
+            </thead>
+            <tbody id="groupBody"></tbody>
+        </table>
+
+        <section>
+            <form>
+                <label>
+                    Student first name
+                    <input id="firstNameStudent" type="text" placeholder="John" />
+                </label>
+                <label>
+                    Student last name
+                    <input id="lastNameStudent" type="text" placeholder="Smith" />
+                </label>
+                <label>
+                    Student age
+                    <input id="ageStudent" type="number" placeholder="18" />
+                </label>
+                <label>
+                    Student group
+                    <input id="groupId" type="number" placeholder="1" />
+                </label>
+            </form>
+
+            <button onclick="addStudent()">Add +</button>
+        </section>
+    </main>
+
+    <footer>
+        <p id="gr"></p>
+    </footer>
+
+    <script src="js/routers.js"></script>
+</body>
+</html>

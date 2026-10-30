@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>College</h1>
+        <button type="button" onclick="loadStudents()">Students</button>
+        <button type="button" onclick="loadGroups()">Groups</button>
+    </header>
+
+    <main>
+        <p id="gr" role="status" aria-live="polite"></p>
+
+        <table id="studentsTable" style="display: none;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody id="studentBody"></tbody>
+        </table>
+
+        <table id="groupsTable" style="display: none;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Group</th>
+                </tr>
+            </thead>
+            <tbody id="groupBody"></tbody>
+        </table>
+
+        <section>
+            <h2>Add group</h2>
+            <form>
+                <label>
+                    Group name
+                    <input id="nameGroup" type="text" maxlength="20" required placeholder="RPO-1" />
+                </label>
+            </form>
+
+            <button type="button" onclick="addGroup()">Add group</button>
+        </section>
+
+        <section>
+            <h2>Add student</h2>
+            <form>
+                <label>
+                    First name
+                    <input id="firstNameStudent" type="text" maxlength="50" required placeholder="John" />
+                </label>
+                <label>
+                    Last name
+                    <input id="lastNameStudent" type="text" maxlength="50" required placeholder="Smith" />
+                </label>
+                <label>
+                    Age
+                    <input id="ageStudent" type="number" min="1" max="120" step="1" required placeholder="18" />
+                </label>
+                <label>
+                    Group ID
+                    <input id="groupId" type="number" min="1" step="1" required placeholder="1" />
+                </label>
+            </form>
+
+            <button type="button" onclick="addStudent()">Add</button>
+        </section>
+
+        <section>
+            <h2>Update student</h2>
+            <form>
+                <label>
+                    ID
+                    <input id="idStudentUpdate" type="number" min="1" step="1" required placeholder="Enter student ID" />
+                </label>
+                <label>
+                    First name
+                    <input id="firstNameUpdate" type="text" maxlength="50" required placeholder="John" />
+                </label>
+                <label>
+                    Last name
+                    <input id="lastNameUpdate" type="text" maxlength="50" required placeholder="Smith" />
+                </label>
+                <label>
+                    Age
+                    <input id="ageUpdate" type="number" min="1" max="120" step="1" required placeholder="18" />
+                </label>
+                <label>
+                    Group ID
+                    <input id="groupIdUpdate" type="number" min="1" step="1" required placeholder="1" />
+                </label>
+            </form>
+
+            <button type="button" onclick="updateStudent()">Save</button>
+        </section>
+
+        <section>
+            <form>
+                <label>
+                    Delete student by ID
+                    <input id="idStudentDelete" type="number" min="1" step="1" required placeholder="Enter student ID" />
+                </label>
+                <button type="button" onclick="deleteStudent()">Delete</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="/js/routers.js"></script>
+</body>
+</html>
